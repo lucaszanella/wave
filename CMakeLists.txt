@@ -14,7 +14,7 @@ if (NOT CMAKE_OSX_DEPLOYMENT_TARGET)
 endif()
 set(CMAKE_DEBUG_POSTFIX d)  # add the d postfix to generated libraries
 
-if(wave_enable_tests)
+if(wave_enable_tests OR FALSE)
   set(gtest_install_dir ${CMAKE_BINARY_DIR}/gtest-install)
   ExternalProject_Add(external_googletest
     GIT_REPOSITORY "https://github.com/google/googletest.git"
